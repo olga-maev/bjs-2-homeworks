@@ -17,10 +17,9 @@ function solveEquation(a, b, c) {
 function calculateTotalMortgage(percent, contribution, amount, date) {
   let totalAmount;
   let s=amount-contribution
-  percent=percent/100
-  let countMonth=Math.round((date - Date.now())/(29.5*24*60*60*1000))
-  let payMonth=s*(percent+(percent/(((1+percent)**countMonth)-1)))
-  totalAmount=parseFloat((Math.round(payMonth*100)/10).toFixed(2))
- 
+  percent=percent/12
+  let countMonth=(date.getFullYear()-new Date().getFullYear())*12 -new Date().getMonth()+date
+  totalAmount=alert(Math.round(s*(percent+(percent/(((1+percent)**countMonth)-1)))*100)/100)+contribution
+  console.log(totalAmount)
   return totalAmount;
 }
