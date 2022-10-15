@@ -5,7 +5,7 @@ function solveEquation(a, b, c) {
   if (d<0){ 
     arr=[]
   }
-  if (d==0){
+  if (d===0){
     arr=[-b/(2*a)]
   } 
   if (d>0) {
@@ -19,7 +19,7 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
   let s=amount-contribution
   percent=percent/12
   let countMonth=(date.getFullYear()-new Date().getFullYear())*12 -new Date().getMonth()+date
-  totalAmount=alert(Math.round(s*(percent+(percent/(((1+percent)**countMonth)-1)))*100)/100)+contribution
+  totalAmount=(s*(percent+(percent/(((1+percent)**countMonth)-1)))+contribution).toFixed(2)
   console.log(totalAmount)
   return totalAmount;
 }
