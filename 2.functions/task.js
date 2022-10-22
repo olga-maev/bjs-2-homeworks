@@ -15,8 +15,8 @@ function getArrayParams(arr) {
 // Задание 2
 function worker(arr) {
   let sum = 0
-  for (let counter = 0; counter < arr.length; counter++) {
-    sum += arr[counter]
+  for (leti = 0; i < arr.length; i++) {
+    sum += arr[i]
   }
   return sum;
 }
